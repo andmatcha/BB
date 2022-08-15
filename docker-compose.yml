@@ -11,7 +11,7 @@ services:
       - php
 
   php:
-    build: .docker/php
+    build: ./docker/php
     volumes:
       - ./src/html:/var/www/html
       - ./src/app:/var/www/app
