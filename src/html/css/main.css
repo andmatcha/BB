@@ -1,0 +1,33 @@
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.wrapper {
+    margin: 48px auto;
+    width: 70%;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.headding {
+    background-color: #6EAACC;
+    height: 72px;
+    padding: 0 48px;
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+    font-weight: 400;
+    color: #FFF;
+}
+
+.contents_outer {
+    padding: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contents {
+    width: 100%;
+    background-color: #E0ECF3;
+    padding: 16px;
+}
