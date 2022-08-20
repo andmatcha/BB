@@ -36,7 +36,7 @@ function cInputSection($label, $name, $type,  $attributes = [])
 ?>
     <div class="c_input_section">
         <label for="<?= $name ?>" class="c_input_label"><?= $label ?></label>
-        <input name="<?= $name ?>" type="<?= $type ?>" class="c_input">
+        <input name="<?= $name ?>" type="<?= $type ?>" class="c_input"<?= $attributesString ?>>
     </div>
     <style>
         .c_input_section {
