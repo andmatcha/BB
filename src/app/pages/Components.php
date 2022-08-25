@@ -23,8 +23,10 @@ function cMainButton($text, $attributes = [])
             justify-content: center;
             align-items: center;
             padding: 0 48px;
+            max-width: fit-content;
             height: 64px;
             font-size: 20px;
+            letter-spacing: 1.6px;
         }
     </style>
 <?php
@@ -142,6 +144,33 @@ function cMessageCard($userId, $authorId, $name, $datetime, $picturePath, $messa
 
         .c_message_delete {
             color: #E94A4A;
+        }
+    </style>
+<?php
+}
+
+function cTextarea($name, $attributes = [])
+{
+    $attributesString = convertAttributesArrayToString($attributes);
+?>
+    <div class="c_textarea_outer">
+        <textarea name="<?= $name ?>" <?= $attributesString ?> class="c_textarea"></textarea>
+    </div>
+
+    <style>
+        .c_textarea_outer {
+            width: 100%;
+            height: 240px;
+        }
+        .c_textarea {
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 16px;
+            letter-spacing: 1px;
+            line-height: 24px;
+            resize: none;
         }
     </style>
 <?php

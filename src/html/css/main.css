@@ -30,4 +30,13 @@ body {
     width: 100%;
     background-color: #E0ECF3;
     padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.headding2 {
+    font-size: 20px;
+    padding-top: 8px;
+    letter-spacing: 1.6px;
 }
