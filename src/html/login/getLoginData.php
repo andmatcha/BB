@@ -1,11 +1,11 @@
 <?php
 
-$user_address = htmlspecialchars($_POST["user_address"]);
-$password = htmlspecialchars($_POST["password"]);
+$email = htmlspecialchars($_POST['email']);
+$password = htmlspecialchars($_POST['password']);
 
 
-if($user_address AND $password){
-  echo $user_address . " " . $password ;
+if($email AND $password){
+  echo $email . ' ' . $password ;
 } else {
-  header("location:index.php?empty_info=true");
+  header('location:index.php?empty_info=true');
 }

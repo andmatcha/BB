@@ -3,9 +3,9 @@
 require('/var/www/app/pages/Layouts.php');
 require('/var/www/app/pages/Components.php');
 
-$empty_info = htmlspecialchars($_GET["empty_info"]);
+$empty_info = htmlspecialchars($_GET['empty_info']);
 
-layoutStart("ログイン|ひとこと掲示板", "ログイン");
+layoutStart('ログイン|ひとこと掲示板', 'ログイン');
 
 ?>
 
@@ -24,9 +24,9 @@ if($empty_info):
 <?php
 endif;
 
-cInputSection("メールアドレス", "user_address", "e-mail", []);
-cInputSection("パスワード", "password", "text", []);
-cMainButton("ログイン",["id" => "loginBtn"]);
+cInputSection('メールアドレス', 'email', 'e-mail');
+cInputSection('パスワード', 'password', 'password');
+cMainButton('ログイン',['id' => 'loginBtn']);
 
 ?>
 
