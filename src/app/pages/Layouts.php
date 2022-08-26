@@ -12,7 +12,7 @@ function layoutStart($title, $headding)
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title><?= $title ?></title>
         <link rel="stylesheet" href="https://unpkg.com/destyle.css@3.0.2/destyle.min.css">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="/css/main.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
