@@ -1,7 +1,7 @@
 <?php
 
-require "../../app/pages/Layouts.php";
-require "../../app/pages/Components.php";
+require('/var/www/app/pages/Layouts.php');
+require('/var/www/app/pages/Components.php');
 
 layoutStart("ログイン|ひとこと掲示板", "ログイン");
 
