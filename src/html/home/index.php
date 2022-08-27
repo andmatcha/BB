@@ -1,6 +1,6 @@
 <?php
 
-const MESSAGE_MAX_LENGTH = 14;
+const MESSAGE_MAX_LENGTH = 140;
 
 session_start();
 
