@@ -3,7 +3,11 @@
 session_start();
 
 // 投稿送信時の処理
-if (isset($_POST['token']) && $_POST['token'] === $_SESSION['token']) {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (!isset($_POST['token']) || $_POST['token'] !== $_SESSION['token']) {
+        echo '不正なアクセスです';
+        exit();
+    }
     unset($_SESSION['token']);
     $_SESSION['note'] = '投稿が完了しました！ ユーザーID: ' . $_POST['user_id'] . ', 投稿内容: ' . $_POST['message'];
     header('Location: /home');
