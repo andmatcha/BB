@@ -7,5 +7,5 @@ $password = htmlspecialchars($_POST['password']);
 if($email AND $password){
   echo $email . ' ' . $password ;
 } else {
-  header('location:index.php?empty_info=true');
+  header('Location: index.php?empty_info=true');
 }

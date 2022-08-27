@@ -24,7 +24,7 @@ if($empty_info):
 <?php
 endif;
 
-cInputSection('メールアドレス', 'email', 'e-mail');
+cInputSection('メールアドレス', 'email', 'email');
 cInputSection('パスワード', 'password', 'password');
 cMainButton('ログイン',['id' => 'loginBtn']);
 
