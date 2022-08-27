@@ -40,3 +40,10 @@ body {
     padding-top: 8px;
     letter-spacing: 1.6px;
 }
+
+/* home */
+.home__form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
