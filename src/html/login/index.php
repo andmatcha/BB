@@ -3,17 +3,30 @@
 require('/var/www/app/pages/Layouts.php');
 require('/var/www/app/pages/Components.php');
 
-layoutStart("ログイン|ひとこと掲示板", "ログイン");
+$empty_info = htmlspecialchars($_GET['empty_info']);
+
+layoutStart('ログイン|ひとこと掲示板', 'ログイン');
 
 ?>
 
-<form>
+<form action="getLoginData.php" method="post">
 
 <?php
 
-cInputSection("メールアドレス", "user", "text", []);
-cInputSection("パスワード", "password", "text", []);
-cMainButton("ログイン",["id" => "loginBtn"]);
+if($empty_info):
+?>
+<p id="empty_info_message">メールアドレスとパスワードを入力してください</p>
+<style>
+  #empty_info_message{
+    color: #f00000;
+  }
+</style>
+<?php
+endif;
+
+cInputSection('メールアドレス', 'email', 'e-mail');
+cInputSection('パスワード', 'password', 'password');
+cMainButton('ログイン',['id' => 'loginBtn']);
 
 ?>
 
