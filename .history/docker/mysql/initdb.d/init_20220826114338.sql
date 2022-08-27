@@ -15,7 +15,7 @@ CREATE TABLE users (
 
 );
 
-INSERT INTO 
+INSERT INTO
     users (name, email, password, picture_path)
 VALUES
     ('jin', 'jin_email', 'jin', 'jin_pic');
@@ -35,4 +35,4 @@ CREATE TABLE posts (
 INSERT INTO
     users (message, created_at, updated_at)
 VALUES
-    ('hello', '2022-07-08 18:21:03', '2022-07-08 18:21:03');
+    ('hello', 'jin_email', 'jin');

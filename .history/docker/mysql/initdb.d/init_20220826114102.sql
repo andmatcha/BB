@@ -15,7 +15,7 @@ CREATE TABLE users (
 
 );
 
-INSERT INTO 
+INSERT INTO
     users (name, email, password, picture_path)
 VALUES
     ('jin', 'jin_email', 'jin', 'jin_pic');
@@ -27,12 +27,12 @@ CREATE TABLE posts (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
     message VARCHAR(140) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    created_at DATETIME DEFAULT,
+    updated_at TIMESTAMP C
 
 );
 
 INSERT INTO
     users (message, created_at, updated_at)
 VALUES
-    ('hello', '2022-07-08 18:21:03', '2022-07-08 18:21:03');
+    ('jin', 'jin_email', 'jin', 'jin_pic');

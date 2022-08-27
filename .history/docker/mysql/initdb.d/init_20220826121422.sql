@@ -15,8 +15,7 @@ CREATE TABLE users (
 
 );
 
-INSERT INTO 
-    users (name, email, password, picture_path)
+INSERT INTO users (name, email, password, picture_path)
 VALUES
     ('jin', 'jin_email', 'jin', 'jin_pic');
 
