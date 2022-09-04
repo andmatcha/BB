@@ -3,6 +3,7 @@
 const MESSAGE_MAX_LENGTH = 140;
 
 session_start();
+require('/var/www/html/login/loginCheck.php');
 
 // 投稿送信時の処理
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
