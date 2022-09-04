@@ -3,7 +3,7 @@
 require('/var/www/app/pages/Layouts.php');
 require('/var/www/app/pages/Components.php');
 
-$empty_info = htmlspecialchars($_GET['empty_info']);
+$login_info = htmlspecialchars($_GET['login_info']);
 
 layoutStart('ログイン|ひとこと掲示板', 'ログイン');
 
@@ -13,7 +13,7 @@ layoutStart('ログイン|ひとこと掲示板', 'ログイン');
 
 <?php
 
-if($empty_info):
+if($login_info === 'empty'):
 ?>
 <p id="empty_info_message">メールアドレスとパスワードを入力してください</p>
 <style>
@@ -22,7 +22,16 @@ if($empty_info):
   }
 </style>
 <?php
-endif;
+elseif($login_info === 'wrong'):
+  ?>
+  <p id="wrong_info_message">メールアドレスかパスワードが間違っています</p>
+  <style>
+    #wrong_info_message{
+      color: #f00000;
+    }
+  </style>
+  <?php
+  endif;
 
 cInputSection('メールアドレス', 'email', 'email');
 cInputSection('パスワード', 'password', 'password');

@@ -5,7 +5,10 @@ $password = htmlspecialchars($_POST['password']);
 
 
 if($email AND $password){
-  echo $email . ' ' . $password ;
+  session_start();
+  $_SESSION['email'] = $email;
+  $_SESSION['password'] = $password;
+  header('Location: checkLoginData.php');
 } else {
-  header('Location: index.php?empty_info=true');
+  header('Location: index.php?login_info=empty');
 }
