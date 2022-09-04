@@ -5,10 +5,11 @@ $email = htmlspecialchars($_POST['email']);
 $password = htmlspecialchars($_POST['password']);
 
 if ($email and $password) {
-  $stmt = $db->prepare('SELECT password FROM users WHERE email = :email');
-  $stmt->execute([':email' => $email]);
-  $user_password = $stmt->fetch(PDO::FETCH_ASSOC);
-  if ($user_password['password'] === $password) {
+  $stmt = $db->prepare('SELECT COUNT(*) count FROM users WHERE email = :email AND password = :password');
+  $stmt->execute([':email' => $email, ':password' => $password]);
+  $result = $stmt->fetch(PDO::FETCH_ASSOC);
+  // var_dump($result);
+  if ($result['count'] !== '0') {
     header('Location: /home');
     exit;
   } else {

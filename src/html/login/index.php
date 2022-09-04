@@ -9,7 +9,7 @@ layoutStart('ログイン|ひとこと掲示板', 'ログイン');
 
 ?>
 
-<form action="getLoginData.php" method="post">
+<form action="login.php" method="post">
 
 <?php
 
