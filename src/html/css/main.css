@@ -47,3 +47,11 @@ body {
     flex-direction: column;
     gap: 16px;
 }
+
+.home__note {
+    color: #3cb371;
+}
+
+.home__error {
+    color: #ff4500;
+}
